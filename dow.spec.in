@@ -13,6 +13,7 @@ License: GPLv2
 URL: http://www.megacoder.com/
 Group: Applications/System
 Buildroot: %{_tmppath}/%{name}-root
+BuildRequires: python-markdown2, lynx
 
 %description
 At one time I collected lots of pictures from the Internet.  Sometimes I would have a small picture overwrite a larger picture and I didn't want that to happen.  So I wrote this.
