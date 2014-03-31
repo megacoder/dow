@@ -132,7 +132,7 @@ same_content(
 	result = 1;		/* Guilty until proven innocent		*/
 	do	{
 		int			src_fd;
-		
+
 		src_fd = open( srcFn, O_RDONLY );
 		if( src_fd == -1 )	{
 			error(
@@ -291,14 +291,16 @@ copyfile(
 			if( write( dst_fd, buf, n ) != n )	{
 				error(
 					errno,
-					"out of space of %s device",
+					"error writing %s",
 					dst
 				);
-				break;
+				goto Bail;
 			}
 		}
-		result = 0;
+		/* We failed unless (n==0)				 */
+		result = !!n;
 	} while( 0 );
+Bail:
 	if( src_fd != -1 )	{
 		close( src_fd );
 	}
@@ -417,6 +419,10 @@ process(
 			break;
 		}
 	} while( 0 );
+	if( result )	{
+		/* Copy failed, so silently delete destination		 */
+		unlink( target );
+	}
 	return( result );
 }
 
