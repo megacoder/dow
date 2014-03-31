@@ -7,4 +7,5 @@ EXTRA_DIST	=						\
 	INSTALL							\
 	LICENSE							\
 	NEWS							\
-	README.md
+	README.md						\
+	dow.1.in

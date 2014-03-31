@@ -1,0 +1,21 @@
+.TH dow "1" "DATE" "MegaCoder tools" "User Commands"
+.SH NAME
+dow \- copy files without overwriting destination if contents differ
+.SH SYNPOSIS
+.B dow
+[\fIoptions\fP]
+.SH DESCRIPTION
+.PP
+FIXME FIXME FIXME
+.TP
+\fB\-FIXME\fP \fIarg\fP
+.SH AUTHOR
+Written by Tommy Reynolds <oldest.software.guy@gmail.com>
+.SH REPORTING BUGS
+Bugs?  What are you thinking?
+.SH COPYRIGHT
+Copyright \(co 2013 Tommy Reynolds <oldest.software.guy@gmail.com>
+.br
+International copyright secured.  All rights reserved.
+.br
+This software is licensed as described under the LICENSE file.
