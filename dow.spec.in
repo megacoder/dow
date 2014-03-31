@@ -39,7 +39,7 @@ If the destination exists, and the content differs, refuse to overwrite it.
 
 %files
 %defattr(-,root,root)
-%doc AUTHORS COPYING README INSTALL NEWS LICENSE TODO
+%doc AUTHORS COPYING README.md INSTALL NEWS LICENSE TODO
 %{_bindir}/%{name}
 
 %changelog

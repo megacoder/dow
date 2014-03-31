@@ -7,4 +7,4 @@ EXTRA_DIST	=						\
 	INSTALL							\
 	LICENSE							\
 	NEWS							\
-	README
+	README.md
