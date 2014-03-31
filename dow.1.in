@@ -3,18 +3,34 @@
 dow \- copy files without overwriting destination if contents differ
 .SH SYNPOSIS
 .B dow
-[\fIoptions\fP]
+[\fI-D\fP]
+[\fI-n\fP]
+[\fI-v\fP]
+.B src
+[\fBsrc2\fP...]
+.B dest
 .SH DESCRIPTION
 .PP
-FIXME FIXME FIXME
+Copy the \fBsrc\fP file(s) to the destination \fBdest\fP without overwriting
+the destination file if its content differs from that of the \fBsrc\fP file.
+If multiple \fBsrc\fP files are given, then the \fBdest\fP must be an existing directory.
 .TP
-\fB\-FIXME\fP \fIarg\fP
+\fB\-D\fP
+Increase amount of debug output.
+May be used multiple times, up to a limit.
+Not useful to anyone other than the developer and probably not even him.
+.TP
+\fB\-n\fP
+Do not actually change anything, just tell what would be done.
+.TP
+\fB\-v\fP
+Describe what actions are being taken, as they are taken.
 .SH AUTHOR
 Written by Tommy Reynolds <oldest.software.guy@gmail.com>
 .SH REPORTING BUGS
 Bugs?  What are you thinking?
 .SH COPYRIGHT
-Copyright \(co 2013 Tommy Reynolds <oldest.software.guy@gmail.com>
+Copyright \(co 2014 Tommy Reynolds <oldest.software.guy@gmail.com>
 .br
 International copyright secured.  All rights reserved.
 .br

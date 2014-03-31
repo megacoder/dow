@@ -42,7 +42,8 @@ If the destination exists, and the content differs, refuse to overwrite it.
 %defattr(-,root,root)
 %doc AUTHORS COPYING README.md INSTALL NEWS LICENSE TODO
 %{_bindir}/%{name}
+%{_mandir}/man1/dow.1.gz
 
 %changelog
-* Tue May 16 2009 Tommy Reynolds <Tommy.Reynolds@MegaCoder.com>
-- Booger
+* Mon Mar 31 2014 Tommy Reynolds <oldest.software.guy@gmail.com>
+- Moved to github.com
