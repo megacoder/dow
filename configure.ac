@@ -30,6 +30,7 @@ AC_CONFIG_FILES([
         Makefile
         dow.spec
         dow.1
+        src/version.h
         src/Makefile
 ])
 AC_OUTPUT

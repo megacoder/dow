@@ -15,6 +15,8 @@
 #include <assert.h>
 #include <errno.h>
 
+#include "version.h"
+
 typedef	enum		action_e	{
 	Action_none	= 0,
 	Action_refuse	= 1,
@@ -101,6 +103,11 @@ usage(
 		" [file1..filen dir]"
 		"\n",
 		me
+	);
+	fprintf(
+		stderr,
+		"Version %s",
+		VERSION
 	);
 }
 
