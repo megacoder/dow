@@ -1,19 +1,29 @@
-.TH dow "1" "DATE" "MegaCoder tools" "User Commands"
+.TH dow "1" "31 Mar 2014" "MegaCoder tools" "User Commands"
 .SH NAME
 dow \- copy files without overwriting destination if contents differ
 .SH SYNPOSIS
 .B dow
-[\fI-D\fP]
-[\fI-n\fP]
-[\fI-v\fP]
+.IR -D
+.IR -n
+.IR -v
 .B src
 [\fBsrc2\fP...]
 .B dest
 .SH DESCRIPTION
 .PP
-Copy the \fBsrc\fP file(s) to the destination \fBdest\fP without overwriting
-the destination file if its content differs from that of the \fBsrc\fP file.
-If multiple \fBsrc\fP files are given, then the \fBdest\fP must be an existing directory.
+Copy the
+.B src
+file(s) to the destination
+.B dest
+without overwriting
+the destination file if its content differs from that of the
+.B src
+file.
+If multiple
+.B src
+files are given, then the
+.B dest
+must be an existing directory.
 .TP
 \fB\-D\fP
 Increase amount of debug output.
