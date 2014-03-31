@@ -106,7 +106,7 @@ usage(
 	);
 	fprintf(
 		stderr,
-		"Version %s",
+		"Version %s\n",
 		VERSION
 	);
 }
