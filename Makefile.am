@@ -1,5 +1,7 @@
 SUBDIRS=src
 
+man_MANS = dow.1
+
 EXTRA_DIST	=						\
 	AUTHORS							\
 	COPYING							\
