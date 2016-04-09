@@ -1,10 +1,11 @@
 /*
- * vim: ts=8 sw=8
+ * vim: ts=8 sw=8 noet
  */
 
 #include <sys/types.h>
 #include <sys/mman.h>
 #include <sys/stat.h>
+#include <sys/sendfile.h>
 #include <fcntl.h>
 #include <limits.h>
 #include <unistd.h>
@@ -273,8 +274,7 @@ copyfile(
 	src_fd = -1;
 	dst_fd = -1;
 	do	{
-		size_t const	Lbuf = 1024 * 256;
-		char		buf[ Lbuf ];
+		struct stat	st;
 		ssize_t		n;
 
 		src_fd = open( src, O_RDONLY );
@@ -294,18 +294,25 @@ copyfile(
 				dst
 			);
 		}
-		while( (n = read( src_fd, buf, Lbuf )) > 0 )	{
-			if( write( dst_fd, buf, n ) != n )	{
-				error(
-					errno,
-					"error writing %s",
-					dst
-				);
-				goto Bail;
-			}
+		if( fstat( src_fd, &st ) == -1 )	{
+			error(
+				errno,
+				"cannot stat %s",
+				src
+			);
+			break;
+		}
+		if(
+			sendfile( dst_fd, src_fd, NULL, st.st_size ) == -1
+		)	{
+			error(
+				errno,
+				"copy failed"
+			);
+			break;
 		}
 		/* We failed unless (n==0)				 */
-		result = !!n;
+		result = 0;
 	} while( 0 );
 Bail:
 	if( src_fd != -1 )	{
