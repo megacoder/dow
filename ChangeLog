@@ -1,0 +1,89 @@
+2016-04-08  Tommy Reynolds <Tommy.Reynolds@MegaCoder.com>
+
+	* src/dow.c: Use Linux's sendfile(2) instead of manual
+	read(2)/write(2) loop.
+
+2016-04-08  Tommy Reynolds <Tommy.Reynolds@MegaCoder.com>
+
+	* configure.ac: Ignore missing README, since we don't use it.
+
+2016-04-08  Tommy Reynolds <Tommy.Reynolds@MegaCoder.com>
+
+	* COPYING: Include real file and not a symlink
+
+2016-04-08  Tommy Reynolds <Tommy.Reynolds@MegaCoder.com>
+
+	* INSTALL: Include real file, not a symlink
+
+2016-04-08  Tommy Reynolds <Tommy.Reynolds@MegaCoder.com>
+
+	* dow.spec.in: Drop requirement for python-markdown2
+
+2016-04-08  Tommy Reynolds <Tommy.Reynolds@MegaCoder.com>
+
+	* configure.ac: Bump version number.
+
+2016-04-08  Tommy Reynolds <Tommy.Reynolds@MegaCoder.com>
+
+	* Makefile.am: Don't generate the README.* files, just distribute
+	the README.md
+
+2014-03-31  Tommy Reynolds <Tommy.Reynolds@MegaCoder.com>
+
+	* dow.1.in: Cleaning up man(1) page.
+
+2014-03-31  Tommy Reynolds <Tommy.Reynolds@MegaCoder.com>
+
+	* src/dow.c: Newline!
+
+2014-03-31  Tommy Reynolds <Tommy.Reynolds@MegaCoder.com>
+
+	* Makefile.am: Identify the man(1) page.
+
+2014-03-31  Tommy Reynolds <Tommy.Reynolds@MegaCoder.com>
+
+	* configure.ac, src/Makefile.am, src/dow.c, src/version.h.in: 
+	Include version number.
+
+2014-03-31  Tommy Reynolds <Tommy.Reynolds@MegaCoder.com>
+
+	* dow.1.in, dow.spec.in: Install the generated man(1) page.
+
+2014-03-31  Tommy Reynolds <Tommy.Reynolds@MegaCoder.com>
+
+	* Makefile.am, dow.spec.in: Generate the man(1) page from the
+	template.  Added RPM build requirements to spec file.
+
+2014-03-31  Tommy Reynolds <Tommy.Reynolds@MegaCoder.com>
+
+	* Makefile.am, configure.ac, dow.1.in: Beginnings of a man(1) page.
+
+2014-03-31  Tommy Reynolds <Tommy.Reynolds@MegaCoder.com>
+
+	* bootstrap.sh: Whitespace change.
+
+2014-03-31  Tommy Reynolds <Tommy.Reynolds@MegaCoder.com>
+
+	* Makefile.am, dow.spec.in: Include "README.md" in RPM docs.
+
+2014-03-31  Tommy Reynolds <Tommy.Reynolds@MegaCoder.com>
+
+	* README: Cleanup
+
+2014-03-31  Tommy Reynolds <Tommy.Reynolds@MegaCoder.com>
+
+	* configure.ac, src/dow.c: If internal copyfile fails, delete
+	destination and not the source file.  Previously, the target was
+	never deleted, even if the copy/rename failed.
+
+2014-03-31  Tommy Reynolds <Tommy.Reynolds@MegaCoder.com>
+
+	* AUTHORS, COPYING, ChangeLog, INSTALL, LICENSE, Makefile.am, NEWS,
+	README, TODO, autogen.sh, bootstrap.sh, configure.ac, dow.spec.in,
+	src/Makefile.am, src/dow.c: Migrate from private repository to
+	github.
+
+2014-03-31  Tommy Reynolds <oldest.software.guy@gmail.com>
+
+	* Initial commit
+
