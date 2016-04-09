@@ -6,7 +6,7 @@ AC_INIT([dow], [1.0.3], [oldest.software.guy@gmail.com])
 AC_CONFIG_SRCDIR([src/dow.c])
 AC_CONFIG_HEADERS([src/config.h])
 
-AM_INIT_AUTOMAKE
+AM_INIT_AUTOMAKE([foreign])
 
 # Checks for programs.
 AC_PROG_CC
